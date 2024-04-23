@@ -13,7 +13,9 @@ export default function BtnShutDown({
   return (
     <button
       onClick={handleOnClicked}
-      className={`h-[${size}px] w-[${size}px] rounded-full ${
+      className={`${
+        size ? `h-[${size}px] w-[${size}px]` : "h-[35px] w-[35px]"
+      } rounded-full ${
         state === "on"
           ? "bg-[linear-gradient(315deg,rgba(184,158,244,1)_20%,rgba(137,183,254,1)_49%)]"
           : "bg-[#3F4562]"

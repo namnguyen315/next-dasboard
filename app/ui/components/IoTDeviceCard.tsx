@@ -83,11 +83,7 @@ export default function IoTDeviceCard({
           >
             {state.toUpperCase()}
           </p>
-          <BtnShutDown
-            size={35}
-            state={state}
-            handleOnClicked={handleOnClicked}
-          />
+          <BtnShutDown state={state} handleOnClicked={handleOnClicked} />
         </div>
       </div>
     </div>

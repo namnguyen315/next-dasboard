@@ -3,8 +3,8 @@ import { MdOutlineSwapVert } from "react-icons/md";
 
 export default function BtnSwitch({
   size = 25,
-  color = "#4af3f3",
-  hoverColor = "#275daf",
+  color,
+  hoverColor,
   position,
   handleOnClicked,
 }: {
@@ -17,7 +17,19 @@ export default function BtnSwitch({
   return (
     <button
       onClick={handleOnClicked}
-      className={`w-[${size}px] h-[${size}px] text-[${color}] hover:text-[${hoverColor}] ${position} transition duration-[0.5s] ease-[ease]`}
+      className={`w-[${size}px] h-[${size}px] ${
+        color
+          ? color.startsWith("#")
+            ? `text-[${color}]`
+            : `text-${color}`
+          : "text-softCyan"
+      } ${
+        hoverColor
+          ? hoverColor.startsWith("#")
+            ? `hover:text-[${hoverColor}]`
+            : `hover:text-${hoverColor}`
+          : `hover:text-darkBlue`
+      }  ${position} transition duration-[0.5s] ease-[ease]`}
     >
       <MdOutlineSwapVert size={`${size}px`} />
     </button>

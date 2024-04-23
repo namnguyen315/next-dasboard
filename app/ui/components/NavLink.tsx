@@ -6,12 +6,10 @@ import { MdSpaceDashboard } from "react-icons/md";
 import { FaChartLine, FaFileInvoiceDollar } from "react-icons/fa";
 import { FaCartShopping } from "react-icons/fa6";
 import { IoSettingsSharp } from "react-icons/io5";
-import { useState } from "react";
 import { usePathname } from "next/navigation";
 
 export default function NavLink() {
   const pathname = usePathname().split("/dashboard/")[1];
-  console.log(pathname);
 
   const link = [
     {

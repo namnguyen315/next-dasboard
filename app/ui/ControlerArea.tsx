@@ -72,8 +72,8 @@ export default async function ControlerArea() {
         </div>
         <button className="flex flex-row w-[95%] h-[40px] bottom-0 p-[5px_10px] absolute bg-[#252836] rounded-md items-center hover:bg-slate-500 transition duration-[0.5s] ease-[ease]">
           <CiSquarePlus size="30px" color="#FEFBF6" />
-          <p className="w-[calc(100%_-_30px_-_30px)] text-[14px] font-bold text-slate-200">
-            Add device
+          <p className="w-[calc(100%_-_30px)] flex justify-center items-center text-[14px] font-bold text-slate-200">
+            Add IoT device
           </p>
         </button>
       </div>
